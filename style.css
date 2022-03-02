@@ -31,9 +31,9 @@ section.main{
     position: relative;
     justify-content: center;
     align-items: center;
-    background-color: #2980b9;
-    background: -webkit-linear-gradient(to right, #ffffff, #6dd5fa,#2980b9);
-    background: linear-gradient(to right, #ffffff, #6dd5fa,#2980b9);
+    background-color: #010101;
+    background: -webkit-linear-gradient(to right, #770000, #491e1e,#010101);
+    background: linear-gradient(to right, #770000, #491e1e,#010101);
 }
 
 section.main:after{
@@ -43,20 +43,31 @@ section.main:after{
     width: 100%;
     height: 50%;
     background: transparent;
-    background: linear-gradient(to top , #2980b9, transparent);
-    background: -webkit-linear-gradient(to top , #2980b9, transparent);
+    background: linear-gradient(to top , #01010101, transparent);
+    background: -webkit-linear-gradient(to top , #010101, transparent);
 
+}
+
+section.main .mode{
+    position: fixed;
+    background-color: aqua;
+    width: 40px;
+    height: 40px;
+    top: 30px;
+    right: 30px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
 }
 
 section.main .title{
     font-size: 12rem;
     letter-spacing: -6;
-    color: #ffffff;
+    color: #161616;
     position: relative;
     top: -36px;
-
-
 }
+
 section.main .clouds{
     position:absolute;
     top: 0;
@@ -82,9 +93,9 @@ section.main .clouds img{
     25%{
         opacity: 1;
     }
-    50%{
+    90%{
         opacity: 1;
-        transform: scale(1);
+        transform: scale(4);
     }
     100%{
         opacity: 0;
@@ -92,4 +103,5 @@ section.main .clouds img{
     }
   
 }
+
 
