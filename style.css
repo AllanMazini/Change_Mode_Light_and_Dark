@@ -31,10 +31,20 @@ section.main{
     position: relative;
     justify-content: center;
     align-items: center;
-    background-color: #010101;
+}  
+
+section.main.dark {
+    background: #010101;
     background: -webkit-linear-gradient(to right, #770000, #491e1e,#010101);
     background: linear-gradient(to right, #770000, #491e1e,#010101);
 }
+
+section.main.light {
+    background: #010101;
+    background: -webkit-linear-gradient(to right, #ffffff, #6dd5fa,#2980b9);
+    background: linear-gradient(to right, #ffffff, #6dd5fa,#2980b9);
+}
+
 
 section.main:after{
     content: '';
@@ -42,15 +52,22 @@ section.main:after{
     bottom: 0;
     width: 100%;
     height: 50%;
+   
+
+}
+section.main.dark::after{
     background: transparent;
     background: linear-gradient(to top , #01010101, transparent);
     background: -webkit-linear-gradient(to top , #010101, transparent);
-
+}
+section.main.light::after{
+    background: transparent;
+    background: linear-gradient(to top , #2980b9, transparent);
+    background: -webkit-linear-gradient(to top , #2980b9, transparent);
 }
 
 section.main .mode{
     position: fixed;
-    background-color: aqua;
     width: 40px;
     height: 40px;
     top: 30px;
@@ -60,12 +77,29 @@ section.main .mode{
     outline: none;
 }
 
+section.main.dark .mode{
+    background-color: white;
+}
+
+section.main.light .mode{
+    background-color: black;
+}
+
 section.main .title{
     font-size: 12rem;
     letter-spacing: -6;
-    color: #161616;
     position: relative;
     top: -36px;
+}
+
+section.main.dark .title{
+    color: #161616;
+    text-transform:uppercase;
+}
+
+section.main.light .title{
+    color: #ffffff;
+    text-transform: none;
 }
 
 section.main .clouds{
@@ -78,6 +112,7 @@ section.main .clouds{
     pointer-events: none;
 
 }
+
 section.main .clouds img{
     position: absolute;
     bottom: 0;
